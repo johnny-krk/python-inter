@@ -55,6 +55,10 @@ def mean(*args):
 
 # calculate mean and append dict with {'species': ..., 'mean': ...}
 # type: list[dict]
-result = ...
 
-# Solution
+result = []
+for *values, species in DATA[1:]:
+    m = mean(*values)
+    dict_s = {'species': species, 'mean': m}
+    result.append(dict_s)
+

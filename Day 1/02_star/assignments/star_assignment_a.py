@@ -51,3 +51,5 @@ DATA = ['10.13.37.1', 'nasa.gov', 'esa.int', 'polsa.gov.pl']
 # hosts = DATA[1:]
 
 # Solution
+
+ip, *hosts = DATA

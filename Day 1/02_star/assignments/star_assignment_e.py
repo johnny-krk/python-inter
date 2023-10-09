@@ -54,3 +54,9 @@ SUFFIXES = ('ca', 'osa')
 result = ...
 
 # Solution
+result = []
+for row in DATA[1:]:
+    print(row)
+    *values, name = row
+    if name.endswith(SUFFIXES):
+        result.append(name)
