@@ -62,7 +62,15 @@ Tests:
 # Return True if all arguments are int or float, otherwise False
 # type: Callable[[int|float],bool]
 def isnumeric(*args):
-    ...
+    status = False
+    for item in args:
+        if type(item) != float and type(item) != int:
+            status = False
+            break
+        else:
+            status = True
+    return status
+
 
 
 # Solution

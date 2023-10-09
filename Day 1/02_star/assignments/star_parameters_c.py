@@ -68,13 +68,32 @@ Tests:
     True
     >>> isnumeric(a='one')
     False
+    >>> isnumeric(1, a='one')
+    False
+    >>> isnumeric(2, a=3)
+    True
 """
 
 
 # Return True if all arguments are int or float, otherwise False
 # type: Callable[[int|float],bool]
 def isnumeric(*args, **kwargs):
-    ...
-
+    status = False
+    count = 0
+    for item in args:
+        count += 1
+        if type(item) != float and type(item) != int:
+            status = False
+            break
+        else:
+            status = True
+    if count == 0 or status:
+        for k, v in kwargs.items():
+            if type(v) != float and type(v) != int:
+                status = False
+                break
+            else:
+                status = True
+    return status
 
 # Solution

@@ -39,3 +39,15 @@ Tests:
 
 
 # Solution
+def mean(*args):
+    sum = 0.0
+    count = 0.0
+    for item in args:
+        sum += item
+        count += 1.0
+    result = 0.0
+    if count > 0:
+        result = sum / count
+    else:
+        raise ValueError('At least one argument is required')
+    return result
