@@ -67,6 +67,27 @@ Tests:
 # note: function does not take keyword arguments
 # type: Callable[[int,int,int], list[int]]
 def myrange(*args, **kwargs):
+    if len(kwargs) !=0:
+        raise TypeError("myrange() takes no keyword arguments")
+    if args == ():
+        raise TypeError("myrange expected at least 1 argument, got 0")
+    if len(args) > 3:
+        raise TypeError("myrange expected at most 3 arguments, got 4")
+
+
+    step = 1
+    start = 0
+    stop = 0
+    if len(args) != 0:
+        if len(args) == 3:
+            start, stop, step = args
+        if len(args) == 2:
+            start, stop = args
+        if len(args) == 1:
+            stop = args[0]
+
+
+
     current = start
     result = []
 
