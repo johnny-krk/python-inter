@@ -32,6 +32,6 @@ DATA = (5.1, 3.5, 1.4, 0.2, 'setosa')
 
 # dump DATA to JSON format
 # type: str
-result = ...
+result = json.dumps(DATA)
 
 # Solution

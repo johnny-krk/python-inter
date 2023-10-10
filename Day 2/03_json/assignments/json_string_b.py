@@ -46,6 +46,6 @@ DATA = [
 
 # dump DATA to JSON format
 # type: str
-result = ...
+result = json.dumps(DATA)
 
 # Solution

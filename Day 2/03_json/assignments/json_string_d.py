@@ -68,6 +68,6 @@ DATA = (
 
 # Load `DATA` from JSON format
 # type: list[dict]
-result = ...
+result = json.loads(DATA)
 
 # Solution
