@@ -78,7 +78,11 @@ DATA = [
 
 # Convert DATA from list[tuple] to list[dict]
 # type: list[dict[str,float|str]]
-result = ...
+KEYS = DATA[0]
+
+result = []
+for items in DATA[1:]:
+    result.append(dict(zip(KEYS, items)))
 
 
 # Solution

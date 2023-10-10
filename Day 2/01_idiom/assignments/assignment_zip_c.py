@@ -37,6 +37,6 @@ Tests:
 """
 DATA = ['January', 'February', 'March', 'April']
 
-result = ...
+result = zip(range(0, len(DATA)), DATA)
 
 # Solution

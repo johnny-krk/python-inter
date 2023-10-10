@@ -55,6 +55,6 @@ VALUES = [5.8, 2.7, 5.1, 1.9, 'virginica']
 
 # Dict with Zipped KEYS and VALUES
 # type: dict[str,float|str]
-result = ...
+result = dict(zip(KEYS, VALUES))
 
 # Solution

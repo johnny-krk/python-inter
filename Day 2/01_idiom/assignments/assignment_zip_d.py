@@ -56,7 +56,15 @@ Tests:
 # Define function `myrange` with parameters: `a`, `b`, `strict`
 # type: Callable[[Iterable, Iterable, bool], list[tuple]]
 def myzip(a, b, strict=False):
-    ...
+    result = []
+    len_a = len(a)
+    len_b = len(b)
+    if strict and len_a != len_b:
+        raise ValueError("zip() argument 2 is longer than argument 1")
+    min_ab = min(len_a, len_b)
+    for idx in range(0, min_ab):
+        result.append(tuple([a[idx], b[idx]]))
+    return result
 
 
 # Solution
