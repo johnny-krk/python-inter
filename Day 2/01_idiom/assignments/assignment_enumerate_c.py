@@ -64,6 +64,8 @@ MONTHS = ['January', 'February', 'March', 'April',
 
 # With zero-padded number and month name
 # type: dict[str,str]
-result = ...
+result = {}
+for k, v in dict(enumerate(MONTHS, start=1)).items():
+    result[f'{k:02}'] = v
 
 # Solution

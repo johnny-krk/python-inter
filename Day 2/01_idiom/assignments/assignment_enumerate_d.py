@@ -63,6 +63,19 @@ DATA = """3,4,setosa,virginica,versicolor
 
 # values from file (note the list[tuple] format!)
 # type: dict[int,str]
-result = ...
+
+#*`dict(enumerate())`
+#*`str.splitlines()`
+#*`str.split()`
+#*`str.strip()`
+
+lines = DATA.splitlines()
+
+nrows, nfeatures, *class_labels = lines[0].split(',')
+
+nrows = int(nrows.strip())
+nfeatures = int(nfeatures.strip())
+
+result = dict(enumerate(class_labels))
 
 # Solution

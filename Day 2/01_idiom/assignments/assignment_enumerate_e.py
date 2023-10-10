@@ -48,7 +48,11 @@ Tests:
 # Define function `myenumerate` with parameters: `iterable`, `start`
 # type: Callable[[Iterable, int], list[tuple]]
 def myenumerate(iterable, start=0):
-    ...
-
+    idx = start
+    result = []
+    for item in iterable:
+        result.append(tuple([idx, item]))
+        idx += 1
+    return result
 
 # Solution
