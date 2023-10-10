@@ -67,13 +67,10 @@ label_encoder = dict(enumerate(class_labels))
 
 
 def parse(line):
-    res = []
     *items, idx = line.split(',')
-    for item in items:
-        item = item.strip()
-        res.append(float(item))
-    res.append(class_labels[int(idx)])
-    return tuple(res)
+    res = (class_labels[int(idx)],)
+    res = tuple(map(lambda x: float(x.strip()), items)) + res
+    return res
 
 result = map(parse, lines )
 
