@@ -55,13 +55,21 @@ martinez:x:1002:1002:Rick Martinez:/home/martinez:/bin/bash"""
 # list[str] with usernames when UID [third field] is less than 1000
 # type: Callable[[str], list[str]]
 def function(data: str):
-    ...
+    result = []
+    for lines in data.splitlines():
+        login, x, uid, *_ = lines.split(":")
+        if int(uid) < 1000:
+            result.append(login)
+    return result
 
 
 # list[str] with usernames when UID [third field] is less than 1000
 # type: Generator
 def generator(data: str):
-    ...
+    for lines in data.splitlines():
+        login, x, uid, *_ = lines.split(":")
+        if int(uid) < 1000:
+            yield login
 
 
 # Solution
