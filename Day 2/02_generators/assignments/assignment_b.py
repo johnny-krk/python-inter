@@ -60,6 +60,7 @@ Tests:
     >>> getsizeof(generator(DATA*100, 'setosa'))
     224
 """
+import sys
 
 DATA = [
     (5.8, 2.7, 5.1, 1.9, 'virginica'),
@@ -74,14 +75,22 @@ DATA = [
 # Function get `features: list[float]` from `DATA` for given `species`
 # type: Callable[[list[float|str], str], list[float]]
 def function(data: list, species: str):
-    ...
+    result = []
+    for item in data:
+        *features, item_species = item
+        if item_species == species:
+            result.append(list(features))
+    return result
 
 
 # Generator get `features: list[float]` from `DATA` for given `species`
 # type: Generator
 def generator(data: list, species: str):
-    ...
+    for *features, item_species in data:
+        if item_species == species:
+            yield list(features)
 
 
+print(sys.version)
 # Solution
 
