@@ -57,11 +57,11 @@ DATA = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 # Returns if number is odd (modulo divisible by 2 without reminder)
 # type: Callable[[int], bool]
 def odd(x):
-    ...
+    return x % 2 != 0
 
 # Cube numbers in DATA
 # type: filter
-result = ...
+result = filter(odd, DATA)
 
 
 # Solution

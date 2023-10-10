@@ -45,6 +45,6 @@ DATA = [0, True, 2.0, 'three', 4, 5.0, ['six']]
 
 # Filter-out non-numeric (int or float) values from `DATA`
 # type: filter
-result = ...
+result = filter(lambda x: type(x) is not bool and (isinstance(x, int) or isinstance(x, float)), DATA)
 
 # Solution
