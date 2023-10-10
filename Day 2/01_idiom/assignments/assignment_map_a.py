@@ -45,6 +45,6 @@ DATA = [1, 2, 3]
 
 # Use `map()` to apply function `float()` to DATA
 # type: map
-result = ...
+result = map(lambda x: float(x), DATA)
 
 # Solution

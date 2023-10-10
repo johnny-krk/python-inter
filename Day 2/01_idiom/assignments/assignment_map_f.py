@@ -52,6 +52,6 @@ USERS = [
     User('mlewis', 'Nasa69'),
 ]
 
-result = ...
+result = map(lambda x: x.login() ,USERS)
 
 # Solution

@@ -46,6 +46,6 @@ DATA = ['a', 'b', 'c']
 
 # Use `map()` to apply function `str.upper()` to DATA
 # type: map
-result = ...
+result = map(lambda x: x.upper(), DATA)
 
 # Solution
