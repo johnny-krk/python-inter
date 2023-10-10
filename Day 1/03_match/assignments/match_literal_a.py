@@ -68,10 +68,19 @@ Tests:
 def myrange(*args, **kwargs):
     if kwargs:
         raise TypeError('myrange() takes no keyword arguments')
-
-    start = ...
-    stop = ...
-    step = ...
+    start = 0
+    step = 1
+    match len(args):
+        case 0:
+            raise TypeError("myrange expected at least 1 argument, got 0")
+        case 1:
+            stop = args[0]
+        case 2:
+            start, stop = args
+        case 3:
+            start, stop, step = args
+        case _:
+            raise TypeError(f"myrange expected at most 3 arguments, got {len(args)}")
 
     current = start
     result = []
