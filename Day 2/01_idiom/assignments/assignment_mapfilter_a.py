@@ -65,9 +65,16 @@ header, *lines = DATA.splitlines()
 nrows, nfeatures, *class_labels = header.strip().split(',')
 label_encoder = dict(enumerate(class_labels))
 
-def parse(line):
-    ...
 
-result = ...
+def parse(line):
+    res = []
+    *items, idx = line.split(',')
+    for item in items:
+        item = item.strip()
+        res.append(float(item))
+    res.append(class_labels[int(idx)])
+    return tuple(res)
+
+result = map(parse, lines )
 
 # Solution
