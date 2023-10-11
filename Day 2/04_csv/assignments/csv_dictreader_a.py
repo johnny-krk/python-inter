@@ -64,6 +64,12 @@ with open(FILE, mode='w') as file:
 
 # Using `csv.DictReader` read the `FILE` content
 # type: list[dict]
-result = ...
+
+import csv
+result = []
+with open(FILE) as file:
+    csv_reader = csv.DictReader(file)
+    for row in csv_reader:
+        result.append(row)
 
 # Solution

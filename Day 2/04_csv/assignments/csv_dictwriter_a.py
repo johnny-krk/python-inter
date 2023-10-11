@@ -69,7 +69,11 @@ FILE = r'_temporary.csv'
 # Write DATA to FILE, generate header from DATA
 # type: ContextManager
 with open(FILE, mode='w') as file:
-    ...
+    headers = DATA[0].keys()
+    csv_writer = csv.DictWriter(file, fieldnames=headers, lineterminator='\n',  quoting=csv.QUOTE_ALL)
+    csv_writer.writeheader()
+    for row in DATA:
+        csv_writer.writerow(row)
 
 
 # Solution
