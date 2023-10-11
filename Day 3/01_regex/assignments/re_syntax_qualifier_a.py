@@ -104,18 +104,18 @@ Columbia."""
 # Example: '1', '1', '2', '0', '1', '9', '6', ...
 # Note: define only regex pattern (str), not re.findall(..., TEXT)
 # type: str
-result_a = ...
+result_a = r"[0-9]"
 
 # Find all uppercase letters in text
 # Example: 'A', 'A', 'M', 'C', 'C', 'D', 'R', ...
 # Note: define only regex pattern (str), not re.findall(..., TEXT)
 # type: str
-result_b = ...
+result_b = r"[A-Z]"
 
 # Find all lowercase letters in text
 # Example: 'p', 'o', 'l', 'l', 'o', ...
 # Note: define only regex pattern (str), not re.findall(..., TEXT)
 # type: str
-result_c = ...
+result_c = r"[a-z]"
 
 # Solution
