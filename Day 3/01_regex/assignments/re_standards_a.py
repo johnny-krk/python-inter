@@ -33,7 +33,11 @@ PATTERN = r'^\d{11}$'
 
 
 def is_pesel_valid(pesel: str) -> bool:
-    ...
+    pattern = r'^\d{11}$'
+    found_match = re.search(pesel, pattern)
+    if found_match is None:
+        return True
+    return False
 
 
 # Solution

@@ -56,12 +56,12 @@ Columbia."""
 # Example: 'A'
 # Note: define only regex pattern (str), not re.findall(...)
 # type: str
-result_a = ...
+result_a = r"\A[A-Z]"
 
 # Find all uppercase letter at the beginning of each line
 # Example: 'A', 'J', 'T', 'B', 'M', 'C'
 # Note: define only regex pattern (str), not re.findall(...)
 # type: str
-result_b = ...
+result_b = r"^[A-Z]"
 
 # Solution

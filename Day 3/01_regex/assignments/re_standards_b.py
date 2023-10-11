@@ -29,6 +29,7 @@ PATTERN = r'^\d{11}$'
 WOMAN = {0,2,4,6,8}
 MAN = {1,3,5,7,9}
 
+import re
 
 # type: Callable[[int], bool]
 def is_pesel_woman(pesel):
@@ -37,7 +38,13 @@ def is_pesel_woman(pesel):
     If the second to last number is even,
     then PESEL is woman's, in other case PESEL is man's.
     """
-    ...
+    #pattern = r'^\d{11}$'
+    #found_match = re.findall(pattern, str(pesel))
+    txt = str(pesel)
+    digit = txt[-2]
+    if int(digit) in WOMAN:
+        return True
+    return False
 
 
 # Solution
