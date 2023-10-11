@@ -99,7 +99,8 @@ TEXT = ("In the late 1950s and early 1960s, the United States was engaged in "
 
 # Use re.findall() to get dates in US format, i.e. "April 12, 1961"
 # type: list[str]
-result = ...
+pattern =  r"[A-Z]{1}[a-z]{2,8} [0-9]{1,2}, [0-9]{4}"
+result = re.findall(pattern, TEXT)
 
 
 # Solution

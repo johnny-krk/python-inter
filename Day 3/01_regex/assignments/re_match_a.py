@@ -61,15 +61,15 @@ import re
 
 # pattern matching `+## ### ### ###`
 # type: str
-cell = ...
+cell = r"\+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}$"
 
 # pattern matching `+## ## ### ####`
 # type: str
-work = ...
+work = r"+[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{4}$"
 
 # combination of `+## ### ### ###` and `+## ## ### ####`
 # type: str
-result = ...
+result = r"(\+[0-9]{2} [0-9]{3} [0-9]{3} [0-9]{3}$)|(\+[0-9]{2} [0-9]{2} [0-9]{3} [0-9]{4}$)"
 
 
 # Solution
