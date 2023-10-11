@@ -57,12 +57,12 @@ Columbia."""
 # Example: '11', '20', '1969', ...
 # Note: define only regex pattern (str), not re.findall(...)
 # type: str
-result_a = ...
+result_a = r"[0-9]+"
 
 # Find all floats in text
 # Example: '47.5', '21.5'
 # Note: define only regex pattern (str), not re.findall(...)
 # type: str
-result_b = ...
+result_b = r"[0-9]+\.[0-9]+"
 
 # Solution
