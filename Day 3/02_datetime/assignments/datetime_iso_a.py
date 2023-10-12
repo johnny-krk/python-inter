@@ -29,6 +29,6 @@ DATA = datetime(1969, 7, 21, 2, 56, 15)
 
 # DATA in ISO-8601 format: '1969-07-21T02:56:15'
 # type: datetime
-result = ...
+result = DATA.strftime('%Y-%m-%dT%H:%M:%S')
 
 # Solution
