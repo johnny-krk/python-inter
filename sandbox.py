@@ -72,3 +72,27 @@ print("0.5: ", numpy.quantile(values, 0.5))
 print("0.75: ", numpy.quantile(values, 0.75))
 values_median_h = statistics.median_high(values)
 print(values_median_h)
+
+
+from zoneinfo import ZoneInfo
+utc = ZoneInfo("UTC")
+
+
+
+from enum import StrEnum
+
+class Ordinal(StrEnum):
+    NORTH = 'N'
+    SOUTH = 'S'
+    WEST = 'W'
+    EAST = 'E'
+
+print(Ordinal.NORTH.lower())
+
+import statistics
+print(dir(statistics))
+
+import random
+print(dir(random))
+
+print(random.randint(1, 10))

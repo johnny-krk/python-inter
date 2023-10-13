@@ -36,3 +36,20 @@ class Rectangle:
 
 
 # Solution
+class TestRectangle(unittest.TestCase):
+    def test_creation(self):
+        self.assertRaises(ValueError, Rectangle, -1, 0)
+        self.assertRaises(ValueError, Rectangle, 0, -1)
+        self.assertRaises(ValueError, Rectangle, 1, -1)
+
+    def test_area(self):
+        r = Rectangle(2, 2)
+        self.assertEqual(r.area(), 4)
+
+    def test_circumference(self):
+        r = Rectangle(1, 2)
+        self.assertEqual(r.circumference(), 6)
+
+    def test_str(self):
+        r = Rectangle(2, 3)
+        self.assertEqual(r.__str__(), 'Rectangle(2, 3)')

@@ -44,10 +44,10 @@ ARMSTRONG = datetime(1969, 7, 21, 2, 56, 15)
 
 # Time between GAGARIN and ARMSTRONG
 # type: timedelta
-duration = ...
+duration = ARMSTRONG - GAGARIN
 
 # Number of years rounded to 1 decimal place
 # type: float
-result = ...
+result = round(duration.days / 365, 1)
 
 # Solution
